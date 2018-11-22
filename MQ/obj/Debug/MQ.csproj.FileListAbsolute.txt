@@ -1,0 +1,10 @@
+E:\ProjectForTrain\RabbitMQ\MQ\MQ\bin\Debug\MQ.exe.config
+E:\ProjectForTrain\RabbitMQ\MQ\MQ\obj\Debug\MQ.csprojResolveAssemblyReference.cache
+E:\ProjectForTrain\RabbitMQ\MQ\MQ\bin\Debug\MQ.exe
+E:\ProjectForTrain\RabbitMQ\MQ\MQ\bin\Debug\MQ.pdb
+E:\ProjectForTrain\RabbitMQ\MQ\MQ\bin\Debug\Microsoft.Diagnostics.Tracing.EventSource.dll
+E:\ProjectForTrain\RabbitMQ\MQ\MQ\bin\Debug\RabbitMQ.Client.dll
+E:\ProjectForTrain\RabbitMQ\MQ\MQ\bin\Debug\Microsoft.Diagnostics.Tracing.EventSource.xml
+E:\ProjectForTrain\RabbitMQ\MQ\MQ\bin\Debug\RabbitMQ.Client.xml
+E:\ProjectForTrain\RabbitMQ\MQ\MQ\obj\Debug\MQ.exe
+E:\ProjectForTrain\RabbitMQ\MQ\MQ\obj\Debug\MQ.pdb
