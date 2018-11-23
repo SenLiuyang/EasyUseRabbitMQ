@@ -61,19 +61,11 @@ namespace MQ.RabbitMQManager
         /// </summary>
         /// <param name="ch"></param>
         /// <param name="ea"></param>
-        protected virtual void BeigenProcess(object ch,BasicDeliverEventArgs ea )
+        protected virtual bool BeigenProcess(object ch,BasicDeliverEventArgs ea )
         {
             byte [] body= ea.Body;
             string strBody=Encoding.UTF8.GetString(body);
-            _process.BeginInvoke(strBody, AfterProcess, null);
-        }
-        /// <summary>
-        /// 处理信息之后
-        /// </summary>
-        /// <param name="result"></param>
-        protected virtual void AfterProcess(IAsyncResult result)
-        {
-            bool bresult=_process.EndInvoke(result);
+            return _process(strBody);
         }
     }
 }

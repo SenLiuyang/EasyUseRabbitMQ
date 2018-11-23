@@ -221,14 +221,16 @@ namespace MQ.RabbitMQManager
         /// <summary>
         /// 传入一个委托，用来处理消息，需要先绑定队列
         /// </summary>
-        /// <param name="action"></param>
-        public void BindConsumerEvent(Action<object, BasicDeliverEventArgs> action,string queueName)
+        /// <param name="fun"></param>
+        public void BindConsumerEvent(Func<object, BasicDeliverEventArgs,bool> fun,string queueName)
         {
             CreateConsumer();
             consumer.Received+=(ch,ea)=>
             {
-                action(ch, ea);
-                model.BasicAck(ea.DeliveryTag,false);
+                if( fun(ch, ea))
+                {//如果处理成功，就从服务端将消息删除
+                    model.BasicAck(ea.DeliveryTag, false);
+                }
             };
             model.BasicConsume(queueName,false,consumer);
         }
